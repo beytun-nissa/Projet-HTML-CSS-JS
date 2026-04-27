@@ -30,8 +30,8 @@ function Ajouter(){
 let btn=document.creatElement("button");
 	btn.textContent="supprimer";
 
-btn.onclick=function(){
-	li.remove;
-}
+// btn.onclick=function(){
+	// li.remove();
+// }
 
 li.appendChild(bnt)

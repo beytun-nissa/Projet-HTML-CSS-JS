@@ -201,11 +201,14 @@ function Afficher_user(){
 		//On créér l'objet tache pour pouvoir regrouper plusieurs informations
 		let tacheobjet={
 			texte:les_taches,
+			terminer:false,
 			
 		}
 		//Ici On va lier la tache à l'utilisateur
 		currentUser.taches.push(tacheobjet);
 		
+		localStorage.setItem("users", JSON.stringify(users));
+
 		console.log(currentUser.taches);
 		
 		tache.value="";
@@ -221,71 +224,89 @@ function afficher_tache(){
 	
 	currentUser.taches.forEach((tache,index)=>{
 		
-	let trtache=document.createElement("tr");
-	//texte
-	let tdtache=document.createElement("td");
-	tdtache.textContent=tache.texte;
-	
-	trtache.appendChild(tdtache);
-	
-	// on va creer une fonction pour rendre cliquable les utilisateurs
-	// tr1.onclick=function(){
-		 // currentUser=user;
-		 // console.log("l'utilisateur selectionner est:");
-		// Afficher_user();
+		let trtache=document.createElement("tr");
+		//texte
+		let tdtache=document.createElement("td");
+		tdtache.textContent=tache.texte;
+		
+		trtache.appendChild(tdtache);
+		
+		// on va creer une fonction pour rendre cliquable les utilisateurs
+		// tr1.onclick=function(){
+			 // currentUser=user;
+			 // console.log("l'utilisateur selectionner est:");
+			// Afficher_user();
 
-	// }
-	
-	//---------------------------------------------
-	// Suppprimer Tache:
-	//---------------------------------------------
-	
-	let bsup=document.createElement("button");
-	bsup.textContent="Supprimer";
-	bsup.classList.add("bsup");
-	
-	bsup.onclick=function(e) {
-		e.stopPropagation()
-		currentUser.taches.splice(index,1);
+		// }
 		
-		localStorage.setItem("users", JSON.stringify(users));
-		afficher_tache();
-	};
-	let tdsup=document.createElement("td");
-	tdsup.appendChild(bsup);
-	trtache.appendChild(tdsup);
-	
-	//listache.appendChild(trtache);
-	
-	
-	//---------------------------------------------
-	// Modifier Tache:
-	//---------------------------------------------
-	let bmod=document.createElement("button");
-	bmod.textContent="Modifier";
-	
-	bmod.classList.add("bouton_mmodtache");
-	
-	bmod.onclick=function(e){
-		e.stopPropagation()
-		let nouvtache=prompt("Modifier Tache:",tache.texte);
+		//---------------------------------------------
+		// Suppprimer Tache:
+		//---------------------------------------------
 		
-		if (nouvtache){
-			tache.texte=nouvtache;
+		let bsup=document.createElement("button");
+		bsup.textContent="Supprimer";
+		bsup.classList.add("bsup");
+		
+		bsup.onclick=function(e) {
+			e.stopPropagation()
+			currentUser.taches.splice(index,1);
+			
 			localStorage.setItem("users", JSON.stringify(users));
-			afficher_tache()
+			afficher_tache();
+		};
+		let tdsup=document.createElement("td");
+		tdsup.appendChild(bsup);
+		trtache.appendChild(tdsup);
+		
+		//listache.appendChild(trtache);
+		
+		
+		//---------------------------------------------
+		// Modifier Tache:
+		//---------------------------------------------
+		let bmod=document.createElement("button");
+		bmod.textContent="Modifier";
+		
+		bmod.classList.add("bouton_mmodtache");
+		
+		bmod.onclick=function(e){
+			e.stopPropagation()
+			let nouvtache=prompt("Modifier Tache:",tache.texte);
+			
+			if (nouvtache){
+				tache.texte=nouvtache;
+				localStorage.setItem("users", JSON.stringify(users));
+				afficher_tache()
+			}
+			
+			
 		}
+			let tdmod=document.createElement("td")
+			tdmod.appendChild(bmod);
+			trtache.appendChild(tdmod);
+			
+	//---------------------------------------------
+	// Etat Tache:
+	//---------------------------------------------	
+		let bteta=document.createElement("button");
+		bteta.textContent="A faire";
 		
-		
-	}
-		let tdmod=document.createElement("td")
-		tdmod.appendChild(bmod);
-		trtache.appendChild(tdmod);
-		
-		
+		bteta.onclick=function(e){
+			e.stopPropagation();
+			tache.terminer=!tache.terminer;
+			
+			localStorage.setItem("users", JSON.stringify(users));
+			afficher_tache();
+			}
+		if (tache.terminer){
+			bteta.textContent="Terminé";
+		}
+		let tdbteta=document.createElement("td");
+		tdbteta.appendChild(bteta);
+		trtache.appendChild(tdbteta);
 		
 		listache.appendChild(trtache)
-		
+			
 	});
 	
 };

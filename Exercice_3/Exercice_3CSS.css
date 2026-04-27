@@ -1,0 +1,31 @@
+/* MOBILE */
+@media (max-width: 800px) {
+    #monblk {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+body{  /* POur construire son propre dégradé (cite: CSS Gradient.)  */
+	background: #EEAECA;
+background: linear-gradient(3deg, rgba(238, 174, 202, 1) 0%, rgba(161, 207, 229, 1) 81%, rgba(148, 187, 233, 1) 100%);
+	}
+
+#bouton{
+	background-color:gray;
+	color:pink;
+}
+#monblk {
+    padding: 25px;
+    width: 40%;
+    margin: 50px auto; /* centre horizontalement */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 15px 0;
+    border-radius: 6px;
+    border: 1px solid ;
+}

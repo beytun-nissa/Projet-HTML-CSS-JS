@@ -1,0 +1,165 @@
+
+#h1{ 
+box-shadow: 8px 4px 10px rgba(1,0,0,0.1); 
+	width:40%;
+	background-color:pink;
+	border-radius:13px;
+	text-align: center;
+    margin-bottom: 20px;
+	padding:10px;
+}
+#h2{
+	background-color:green;
+	width:40%;
+	border-radius:13px;
+	margin-top:60px; 
+	padding:10px;
+	/* margin: 20px 0 10px; */
+}
+#h22{
+	background-color:orange;
+	width:40%;
+	border-radius:13px;
+	margin-top:60px; 
+	/* margin:20px; */
+	padding:10px;
+	/* margin: 20px 0 10px; */
+}
+
+#blk{
+    max-width: 900px;
+    margin: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a; /* dark blue */
+    color: #f1f5f9;
+    padding: 20px;
+}
+
+/* Inputs */
+.name {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+    outline: none;
+}
+
+/* Boutons */
+#btn {margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #4facfe;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Effet hover */
+#btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Couleurs des boutons */
+.btn-add {
+    background: #22c55e;
+    color: white;
+}
+
+.btn-supprimer {
+    background: #ef4444;
+    color: white;
+	/* padding:5px; */
+	/* margin-left: 13px; */
+
+}
+
+.btn-modifier{
+    background: #f59e0b;
+    color: white;
+}
+
+.btn-archiver{
+    background: #64748b;
+    color: white;
+}
+
+.btn-desarchiver{
+    background: #64748b;;
+    color: white;
+}
+
+.btn-tache{
+    background: #3b82f6;
+    color: white;
+}
+
+/* Table stylée */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+ th, td { 
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #334155;
+}
+
+tr:nth-child(even) {
+    background: #0f172a; 
+ }
+
+/* Liste tâches */
+#listache li {
+    background: #1e293b;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* tâche terminée */
+/* .done { */
+    /* text-decoration: line-through; */
+    /* color: #94a3b8; */
+/* } */
+
+/* Media QUERY   TABLET / DESKTOP */
+@media (min-width: 768px) {
+    .app {
+        display: flex;
+    height: 100vh;
+    }
+
+    /* Sidebar revient */
+    .mobile-header {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+        width: 250px;
+        background: #111827;
+        color: white;
+        padding: 20px;
+    }
+
+    .main {
+        flex: 1;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,66 @@
+body{
+	background-color:gray;
+	font-family: Times New Roman;
+	
+}
+
+h1{  text-align: center;
+	text-shadow: 3px 3px 0px black;  /* text-shadow permet d'ajouter une ombre sur les lettres de votre texte */
+	/* border-bottom:3px solid white;  */
+	color:white;
+	font-size:25px;
+	font-family:Creepster, cursive;
+	
+}
+#cadre{
+	background-color: #140530;
+	width:500px;
+	height:300px;
+	/* border: 16px solid blue; */
+	border-radius:10px 30px 0px 80px;
+	border:2px  inset gold;
+	margin-left:100px; 
+	margin-top:100px; 
+	text-align:center;
+	/* position: relative; */
+	
+}
+
+
+.info{
+	text-align:left;
+	font-size:20px;
+	color: white;
+	margin-left:250px;	
+	margin-top:-100px; /* Pour REMONTEERR le texte*/
+}
+
+.bande{
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(135deg, #d4af37, #ffd700, #b8860b);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 81%);
+
+}
+
+.image{
+	border: 2px solid gold;
+	border-radius:50%;    /*rendre limage circulaire*/
+	object-fit:cover;    /* pour evityer la deformation  */
+	width:100px;
+	height:100px;
+	margin-right:300px;
+	
+}
+
+.buton{border-radius:10px;
+	font-family: Times New Roman;
+	background-color:white;
+	color:#140530;
+	font-size:30px;
+	margin-left:30%;
+	margin-top:10%;
+	width:80px;
+	height:40px;
+	box-shadow:  2px 2px 3px black;   /* Pour l'ombre */
+}

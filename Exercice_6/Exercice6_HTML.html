@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="Exercice6_CSS.css" >
+	
+	</head>
+	
+	<body>	
+	<div id="blk">	
+	<h1 id="h1">TO-DO list</h1>	
+	
+	<input type="text" id="nom" placeholder="Ajouter un nom" class="name">	
+	<input type="text" id="prenom" placeholder="Ajouter un prenom" class="name">	
+	
+	<button type="button" id="btn" onclick="ajouter_user(event)"> Ajouter_user</button>
+
+	<table border="1">
+		<caption class="h2">Tableau des utilisateurs</caption>
+
+			<tr>
+				<th> Nom </th>
+				<th> Prenom </th>
+				<th> Suppression </th>
+				<th> Modification </th>
+				<th> Archivage </th>
+				<th> Taches </th> 
+			</tr>
+		<tbody id="tbody">
+		</tbody>
+	</table>
+	
+		<table border="1">
+			<h2 class="h2">Utilisateurs archivés</h1>	
+			<tr>
+				<th> Nom </th>
+				<th> Prenom </th>
+				<th> Supprimer </th>
+				<th> Modification </th>
+				<th> Archivage </th>
+				<th> Taches </th> 
+			</tr>
+		
+		<tbody id="tbody2">
+		</tbody>
+	</table>
+	
+	</div>	
+	
+	<input type="text" id="tache" placeholder="Ajouter une tache">	
+	<button onclick="ajouter_tache()"> Ajouter_tache </button>
+	<table id="tabtache" border="1">
+		<h2 class="h2">TACHES</h2 >	
+
+		<tr>
+		<th> Ajouter_Tache </th>
+		<!-- <th> Affecter_Tache </th> -->
+		<th> Suppimer_Tache </th>
+		<th> Modifier_Tache </th>
+		<th> Etat </th>
+		<th></th>
+		
+		</tr>
+		<tbody id="tbodytache">
+		</tbody>
+	</table>	
+	<script src="Exercicee6_js.js"> </script>
+	</body>
+</html>

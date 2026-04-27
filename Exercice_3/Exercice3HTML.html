@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Formulaire </title>
+	
+	<link rel="stylesheet" href="Exercice_3CSS.css"> 
+	</head>
+	
+	<body>
+		<div id="monblk">
+	
+			<form id="formulaire">
+			<label for="nom"> Nom: </label>  
+			<input type="text" id="nom" placeholder="Entrez votre nom" required>  <!-- required "c pour dire que le champ est obligatoire-->
+			<label for="prenom" > Prénom: </label>
+			<input type="text" id="prenom" placeholder="Entrez votre prenom" required> <br> <br>
+			
+			<label for="age"> Age: </label>
+			<input type="number"  id="age" placeholder="Entrez votre age" required>
+			
+			<label for="sexe" required> Sexe: </label>
+			<label> Masculin</label> <input type="radio" name="sexe"  value="Masculin">
+			<label> Feminin</label> <input type="radio" name="sexe"  value="Feminin"> <br><br>
+			
+			<label> Loisir: </label> <br>
+				<input name="loisir" value="lire" type="checkbox"> Lire <br>
+				<input name="loisir" value="jeux" type="checkbox"> Jeux <br>
+				<input name="loisir" value="cours" type="checkbox"> Cours<br>
+				<input name="loisir" value="voyage" type="checkbox"> Voyage <br>
+				<input name="loisir" value="autre" type="checkbox"> Autres<br> <br>
+			
+			<select id="pays" required>
+				<option  value=" "> Choisir votre Pays: </option>
+				<option  value="Sénégal"> Sénégal </option>
+				<option  value="France"> France </option>
+				<option  value="Maroc "> Maroc </option>
+				<option  value="Italie "> Italie </option>
+			</select> <br><br>
+		
+			<label for="commentaire"> commentaire: </label><br>
+			<textarea id="commentaire" required></textarea> <br> <br>
+
+			<button type="submit" onclick="recuperer_champ(event)" > Envoyer </button>
+		
+			</form>
+		</div>	
+			
+		
+		<script src="Exercice_3js.js"> </script>
+	</body>
+
+</html>
